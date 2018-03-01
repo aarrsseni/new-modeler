@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" type="AnchorPane" xmlns="http://javafx.com/javafx/8.0.40" xmlns:fx="http://javafx.com/fxml/1">
+
+    <children>
+        <ImageView fitHeight="100.0" fitWidth="300.0" layoutX="119.0" layoutY="117.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="230.0" AnchorPane.topAnchor="20.0">
+            <image>
+                <Image url="@cayenne-logo.png"/>
+            </image>
+        </ImageView>
+        <VBox prefHeight="200.0" prefWidth="100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="110.0">
+            <children>
+                <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="29.0" prefWidth="604.0" text="Recent Projects" textAlignment="CENTER">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <ListView fx:id="projectListView"  prefHeight="200.0" prefWidth="200.0">
+                    <placeholder>
+                        <Label text="No previously opened projects found; please open or create a new one." />
+                    </placeholder>
+                    <VBox.margin>
+                        <Insets left="20.0" right="20.0" />
+                    </VBox.margin>
+                </ListView>
+                <HBox alignment="CENTER">
+                    <children>
+                        <Button fx:id="openProjectButton" graphicTextGap="6.0"  mnemonicParsing="false"  prefWidth="200.0" text="Open Different Project">
+                            <HBox.margin>
+                                <Insets right="4.0" />
+                            </HBox.margin>
+                        </Button>
+                        <Button fx:id="newProjectButton" onAction="#onNewClicked" graphicTextGap="6.0" mnemonicParsing="false"  prefWidth="200.0" text="Create New Project">
+                            <HBox.margin>
+                                <Insets left="4.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                    <VBox.margin>
+                        <Insets bottom="8.0" top="8.0" />
+                    </VBox.margin>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+
+
+</fx:root>

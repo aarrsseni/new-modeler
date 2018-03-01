@@ -3,16 +3,16 @@ package org.apache.cayenne;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.apache.cayenne.controllers.dialogs.welcome.WelcomeController;
 
 public class App extends BQApplication {
 
+    private WelcomeController welcomeController;
+
     public void start(Stage primaryStage) throws Exception {
-        Parent root = getLoader(org.apache.cayenne.RootController.class.getResource("Root.fxml")).load();
 
-        Scene scene = new Scene(root, 600, 400);
+        welcomeController = new WelcomeController(primaryStage);
 
-        primaryStage.setTitle("This is a test app");
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        welcomeController.show();
     }
 }
